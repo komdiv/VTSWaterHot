@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <title>Расчетный центр "ВТС"</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>let tg = window.Telegram.WebApp;</script>>
 </head>
 <body>
+<script>
+    tg.expand();
+    //tg.MainButton.setParams({"КНОПА": "#143F6B"}); //так изменяются все параметры
+</script>
 <div>
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/WFk63d9/LogoVTS.png" alt="LogoVTS" border="0"></a>
 </div>
@@ -29,7 +34,7 @@
             Введите № договора:
             </td>
         <td>
-            <input type="text" width="80" height="50" tabindex="1">
+            <input type="text" width="80" height="200" placeholder="Введите № договора" tabindex="0">
             </td>
         </tr>
     </Table> <br><br>
