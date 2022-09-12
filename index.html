@@ -40,7 +40,7 @@
    </style>
 </head>
 <body>
-        <5>
+        <6>
 <div>
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/WFk63d9/LogoVTS.png" alt="LogoVTS" border="0"></a>
 </div>
@@ -85,5 +85,10 @@
     tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
     tg.MainButton.Enable;
     tg.MainButton.show;
+
+      Telegram.WebApp.onEvent('mainButtonClicked', function(){
+      tg.sendData("some string that we need to send");
+      //при клике на основную кнопку отправляем данные в строковом виде
+   });
 </script>
 </html>
