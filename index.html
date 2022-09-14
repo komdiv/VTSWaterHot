@@ -83,34 +83,34 @@
         </tr>
         <tr>
             <td width="25%" align="center">
-                <a ><img class="img_i" src="./img/icon-telegram.png" alt="Информация" border="0" width="90%"></a>
+                <a ><img class="img_i" src="./img/icon-telegram.png" alt="Информация" border="0" ></a>
                 <br>
-                <a ><img class="img_i" src="./img/icon-i-telegram_column.jpg" alt="Информация" border="0" width="90%"></a>
+                <a ><img class="img_i" src="./img/icon-i-telegram_column.jpg" alt="Информация" border="0" ></a>
             </td>
             <td width="75%">
-                <p>Для отправки новых показаний. Запишите их в окно для сообщений и нажмите "отправить":</p>
+                <p>1) Для отправки новых показаний. Запишите их в окно для сообщений и нажмите "отправить":</p>
                 <a ><img class="screen" src="./img/Screenshot_01_03_Telegram.jpg" alt="Варианты ответов" border="0" width="90%"></a>
             </td>
         </tr>
         <tr>
             <td width="25%" align="center">
-                <a ><img class="img_i" src="./img/icon-telegram.png" alt="Информация" border="0" width="90%"></a>
+                <a ><img class="img_i" src="./img/icon-telegram.png" alt="Информация" border="0" ></a>
                 <br>
-                <a ><img class="img_i" src="./img/icon-i-telegram_column.jpg" alt="Информация" border="0" width="90%"></a>
+                <a ><img class="img_i" src="./img/icon-i-telegram_column.jpg" alt="Информация" border="0" ></a>
             </td>
             <td width="75%">
-                <p>Для ответов на вопросы нажимайте на варианты ответов, расположенные внизу под строкой ввода:</p>
+                <p>2) Для ответов на вопросы нажимайте на варианты ответов, расположенные внизу под строкой ввода:</p>
                 <a ><img class="screen" src="./img/Screenshot_02_03_Telegram.jpg" alt="Варианты ответов" border="0" width="90%"></a>
             </td>
         </tr>
         <tr>
             <td width="25%" align="center">
-                <a ><img class="img_i" src="./img/icon-telegram.png" alt="Информация" border="0" width="90%"></a>
+                <a ><img class="img_i" src="./img/icon-telegram.png" alt="Информация" border="0" ></a>
                 <br>
-                <a ><img class="img_i" src="./img/icon-i-telegram_column.jpg" alt="Информация" border="0" width="90%"></a>
+                <a ><img class="img_i" src="./img/icon-i-telegram_column.jpg" alt="Информация" border="0" ></a>
             </td>
             <td width="75%">
-                <p>Если варианты ответов скрыты - раскройте их нажав на соответствующую кнопку:</p>
+                <p>3) Если варианты ответов скрыты - раскройте их нажав на соответствующую кнопку:</p>
                 <a ><img class="screen" src="./img/Screenshot_03_03_Telegram.jpg" alt="Варианты ответов" border="0" width="90%"></a>
             </td>
         </tr>
@@ -135,6 +135,7 @@
 </div>
 <!--<button id="btn" class="button">Show/Hide Main Button</button> &lt;!&ndash;Кнопка, чтобы скрыть / показать основную кнопку&ndash;&gt;-->
 <!--<button id="btnED" class="button">Enable/Disable Main Button</button> &lt;!&ndash;Кнопка, чтобы сделать кнопку активной/неактивной&ndash;&gt;-->
+<hr>
 </body>
 
 <script>
@@ -149,6 +150,13 @@
    tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
    tg.MainButton.show(); //показываем
    if(tg.MainButton.isVisible){} else{tg.MainButton.show();}
+
+   Telegram.WebApp.onEvent('mainButtonClicked', function(){
+       window.close();
+      //tg.sendData("some string that we need to send");
+      //при клике на основную кнопку отправляем данные в строковом виде
+   });
+
 
    let btn = document.getElementById("btn"); //получаем кнопку скрыть/показать
 
