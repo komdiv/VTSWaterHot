@@ -6,11 +6,25 @@
     <title>Расчетный центр "ВТС"</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
     <style>
+      .screen{
+        height : 60% ;
+        width : 60% ;
+      }
+      .img_i
+      {
+      align = "top";
+        height : 30% ;
+        width : 30% ;
+<!--        background : grey ;-->
+<!--        border : 1px solid black ;-->
+        object-fit : contain ;
+      }
       body{
          color: var(--tg-theme-text-color);
          background: var(--tg-theme-bg-color);
-         display: flex;
-         flex-direction: column;
+<!--         display: flex;-->
+<!--         flex-wrap : wrap ;-->
+<!--         flex-direction: column;-->
          align-items: center;
          font-size: 18px;
       }
@@ -41,41 +55,76 @@
 </head>
 
 <body>
-        <10>
 <div>
-    <a href="https://imgbb.com/"><img src="https://i.ibb.co/WFk63d9/LogoVTS.png" alt="LogoVTS" border="0"></a>
+    <Table align='center' width="90%">
+        <tr>
+            <td align="center">
+                <a ><img src="https://i.ibb.co/WFk63d9/LogoVTS.png" alt="Logo_OOO_VTS" border="0"></a>
+            </td>
+        </tr>
+    </Table>
 </div>
 <hr>
 <div>
-    <br>
-    <Table align='center' width=80%>
+    <Table align='center' width="80%">
         <tr>
-            <td>
-                <h3 align='center'>Уважаемый потребитель!</h3>
-                <p>Перед вами автоматизированная программа по обслуживанию юридических лиц, заключивших договора
-                    с ООО "Волгодонские тепловые сети", на поставку тепловой энергии и теплоносителя.</p>
-                <p>Для продолжения укажите номер договора</p>
+            <td colspan="2">
+                <h3 align='center'>Уважаемые жители города!</h3>
+                <br>
+                <p>Мы рады представить Вам обновленную версию приложения, с помощью которого Вы сможете ежемесячно передавать показания Ваших приборов учета
+                    в ООО "Расчетный центр "ВТС".</p>
+                <p>Для удобства использования мы сделали интуитивно понятный интерфес в формате диалога. Следуйте инструкциям и у Вас все получится.</p>
+                <br>
             </td>
         </tr>
-    </Table> <br><br>
+        <tr>
+            <td width="25%" align="center">
+                <a ><img class="img_i" src="./img/icon-i-telegram.jpg" alt="Информация" border="0" width="90%"></a>
+            </td>
+            <td width="75%">
+                <p>Для отправки новых показаний. Запишите их в окно для сообщений и нажмите "отправить":</p>
+                <a ><img class="screen" src="./img/Screenshot_01_03_Telegram.jpg" alt="Варианты ответов" border="0" width="90%"></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" align="center">
+                <a ><img class="img_i" src="./img/icon-i-telegram.jpg" alt="Информация" border="0" width="90%"></a>
+            </td>
+            <td width="75%">
+                <p>Для ответов на вопросы нажимайте на варианты ответов, расположенные внизу под строкой ввода:</p>
+                <a ><img class="screen" src="./img/Screenshot_02_03_Telegram.jpg" alt="Варианты ответов" border="0" width="90%"></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" align="center">
+                <a ><img class="img_i" src="./img/icon-i-telegram.jpg" alt="Информация" border="0" width="90%"></a>
+            </td>
+            <td width="75%">
+                <p>Если варианты ответов скрыты - раскройте их нажав на соответствующую кнопку:</p>
+                <a ><img class="screen" src="./img/Screenshot_03_03_Telegram.jpg" alt="Варианты ответов" border="0" width="90%"></a>
+            </td>
+        </tr>
 
-    <Table align='center' width=60% style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>
-        <tr>
-            <td>
-                Введите № договора:
-            </td>
-            <td>
-                <input type="text" width="80" height="200" placeholder="Введите № договора" tabindex="0">
-            </td>
-        </tr>
-    </Table> <br><br>
+    </Table>
+
+
+<!--    <Table align='center' width=60% style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                Введите № договора:-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="text" width="80" height="200" placeholder="Введите № договора" tabindex="0">-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </Table> <br><br>-->
 </div>
 
 
 <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
 </div>
-<button id="btn" class="button">Show/Hide Main Button</button> <!--Кнопка, чтобы скрыть / показать основную кнопку-->
-<button id="btnED" class="button">Enable/Disable Main Button</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
+<!--<button id="btn" class="button">Show/Hide Main Button</button> &lt;!&ndash;Кнопка, чтобы скрыть / показать основную кнопку&ndash;&gt;-->
+<!--<button id="btnED" class="button">Enable/Disable Main Button</button> &lt;!&ndash;Кнопка, чтобы сделать кнопку активной/неактивной&ndash;&gt;-->
 </body>
 
 <script>
@@ -83,8 +132,8 @@
 
    tg.expand(); //расширяем на все окно
 
-   tg.MainButton.text = "Changed Text"; //изменяем текст кнопки
-   tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+   //tg.MainButton.text = "Changed Text"; //изменяем текст кнопки
+   tg.MainButton.setText("Спасибо. Все поянтно."); //изменяем текст кнопки иначе
    tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
    tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
    tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
@@ -93,26 +142,26 @@
 
    let btn = document.getElementById("btn"); //получаем кнопку скрыть/показать
 
-   btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      if (tg.MainButton.isVisible){ //если кнопка показана
-         tg.MainButton.hide() //скрываем кнопку
-      }
-      else{ //иначе
-         tg.MainButton.show() //показываем
-      }
-   });
+<!--   btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки-->
+<!--      if (tg.MainButton.isVisible){ //если кнопка показана-->
+<!--         tg.MainButton.hide() //скрываем кнопку-->
+<!--      }-->
+<!--      else{ //иначе-->
+<!--         tg.MainButton.show() //показываем-->
+<!--      }-->
+<!--   });-->
 
-   let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
-   btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      if (tg.MainButton.isActive){ //если кнопка показана
-         tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет
-         tg.MainButton.disable() //скрываем кнопку
-      }
-      else{ //иначе
-         tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет
-         tg.MainButton.enable() //показываем
-      }
-   });
+<!--   let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать-->
+<!--   btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки-->
+<!--      if (tg.MainButton.isActive){ //если кнопка показана-->
+<!--         tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет-->
+<!--         tg.MainButton.disable() //скрываем кнопку-->
+<!--      }-->
+<!--      else{ //иначе-->
+<!--         tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет-->
+<!--         tg.MainButton.enable() //показываем-->
+<!--      }-->
+<!--   });-->
 
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
       tg.sendData("some string that we need to send");
@@ -120,18 +169,18 @@
    });
 
 
-   let usercard = document.getElementById("usercard"); //получаем блок usercard
+<!--   let usercard = document.getElementById("usercard"); //получаем блок usercard-->
 
-   let profName = document.createElement('p'); //создаем параграф
-   profName.innerText = `${tg.initDataUnsafe.user.first_name}
-   ${tg.initDataUnsafe.user.last_name}
-   ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
-   //выдем имя, "фамилию", через тире username и код языка
-   usercard.appendChild(profName); //добавляем
+<!--   let profName = document.createElement('p'); //создаем параграф-->
+<!--   profName.innerText = `${tg.initDataUnsafe.user.first_name}-->
+<!--   ${tg.initDataUnsafe.user.last_name}-->
+<!--   ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;-->
+<!--   //выдем имя, "фамилию", через тире username и код языка-->
+<!--   usercard.appendChild(profName); //добавляем-->
 
-   let userid = document.createElement('p'); //создаем еще параграф
-   userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
-   usercard.appendChild(userid); //добавляем
+<!--   let userid = document.createElement('p'); //создаем еще параграф-->
+<!--   userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id-->
+<!--   usercard.appendChild(userid); //добавляем-->
 
 
    //работает только в attachment menu
