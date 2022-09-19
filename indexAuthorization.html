@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчетный центр "ВТС"</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/functions2.js"></script>
+    <style>
+    //#tableDialog td{border: 1px solid #000;}
+
+    #tableDialog{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            //border-collapse: collapse;
+            border-spacing: 10px;
+        width: 100%;
+        padding: 10px;
+        //align: center;
+    }
+    #tableDialog label{
+        font-size: larger;
+        alignment: center;
+        align-content: center;
+    }
+
+    .dialog{
+        //padding: 200px;
+        //width: 80%;
+        align: center;
+                -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    }
+    #labelText{
+        font-size: larger;
+        //color: blue;
+    }
+    .inputText{
+        font-family: "Times New Roman";
+        font-weight: bold;
+        color: black;
+        letter-spacing: 7px;
+        font-size: larger;
+        padding: 10px;
+        alignment: center;
+        width: 90%;
+        height: border-box;
+    }
+    #buttonNext{
+            font-family: "Times New Roman";
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-size: larger;
+        padding: 10px;
+        alignment: center;
+        width: 30%;
+        border-radius: 12px;
+        //box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        //height: border-box;
+        background-color: white;
+        color: blue;
+        border: 2px solid #008CBA;
+    }
+    #buttonNext:hover {
+        background-color: #008CBA;
+        color: white;
+        box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+
+    .header{
+        //position: fixed;
+        width: 100%;
+        //background: #fff;
+        padding: 15px 0;
+        z-index: 100;
+<!--        -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);-->
+<!--                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);-->
+    }
+    .main{
+        padding: 10px;
+    }
+      .screen{
+        height : 100% ;
+        width : 100% ;
+      }
+      .img_i
+      {
+      align = "top";
+        height : 30% ;
+        width : 30% ;
+<!--        background : grey ;-->
+<!--        border : 1px solid black ;-->
+        object-fit : contain ;
+      }
+      body{
+        color: black;
+        padding: 150 px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+         background-size: cover;
+<!--         color: var(&#45;&#45;tg-theme-text-color);-->
+<!--         background: var(&#45;&#45;tg-theme-bg-color);-->
+<!--         display: flex;-->
+<!--         flex-wrap : wrap ;-->
+<!--         flex-direction: column;-->
+        align-items: center;
+        font-size: 20px;
+      }
+   </style>
+</head>
+<!--Это заготовка для всех диалогов-->
+<body id="body" background="./img/cloud_fon.jpeg">
+
+<div class="header" >
+    <Table align='center' width="90%">
+        <tr>
+            <td align="center">
+                <a ><img src="./img/logoRC_VTS.png" alt="Logo_RC_VTS" border="0"></a>
+            </td>
+        </tr>
+    </Table>
+    <hr>
+</div>
+
+<script>
+    // let dialog = new Dialog("Введите л/с", 'введите сюда', "авторизоваться", "", "");
+    // createDiv(dialog);
+    // displayText(dialog);
+</script>
+
+<div class="main">
+<!--    <form name="form" id="formId" action="#">-->
+<!--        <fieldset >-->
+
+<!--        </fieldset>-->
+<!--    </form>-->
+    <Table id="tableDialog" >
+        <tr>
+            <td colspan="2" align="center">
+                <lab id="labelText"> Для авторизации укажите свой <b>лицевой счет:</b> </lab>
+                <script>
+
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td id="tdAlertPicture">
+
+            </td>
+            <td id="tdInput" align="center">
+<!--                <fieldset>-->
+<!--                    <legend>лицевой счет</legend>-->
+                    <input class="inputText" id="inputText" padding-top="0" type="text" placeholder="Нажмите тут" tabindex="0">
+<!--                </fieldset>-->
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <br>
+                <input id="buttonNext" type="button" align="center" value="Далее" >
+            </td>
+        </tr>
+
+    </Table>
+        <br><br>
+</div>
+
+
+<!--<div id="usercard"> &lt;!&ndash;Карта профиля, человека, который к нам обратился&ndash;&gt;-->
+<!--</div>-->
+<!--<button id="btn" class="button">Show/Hide Main Button</button> &lt;!&ndash;Кнопка, чтобы скрыть / показать основную кнопку&ndash;&gt;-->
+<!--<button id="btnED" class="button">Enable/Disable Main Button</button> &lt;!&ndash;Кнопка, чтобы сделать кнопку активной/неактивной&ndash;&gt;-->
+<hr>
+
+</body>
+<script>
+<!--Установка слушателя-->
+    document.getElementById("buttonNext").addEventListener("click", getInfo);
+</script>
+
+<script>
+   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+   let NameUser = tg.WebAppUser.first_name;
+   alert(`Hello  + ${NameUser}`);
+
+   tg.expand(); //расширяем на все окно
+
+   //tg.MainButton.text = "Changed Text"; //изменяем текст кнопки
+   tg.MainButton.setText("Спасибо. Все понятно."); //изменяем текст кнопки иначе
+   tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+   tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+   tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+   tg.MainButton.show(); //показываем
+   if(tg.MainButton.isVisible){} else{tg.MainButton.show();}
+
+   Telegram.WebApp.onEvent('mainButtonClicked', function(){
+       window.Telegram.WebApp.close();
+      //tg.sendData("some string that we need to send");
+      //при клике на основную кнопку отправляем данные в строковом виде
+   });
+
+
+   let btn = document.getElementById("btn"); //получаем кнопку скрыть/показать
+
+<!--   btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки-->
+<!--      if (tg.MainButton.isVisible){ //если кнопка показана-->
+<!--         tg.MainButton.hide() //скрываем кнопку-->
+<!--      }-->
+<!--      else{ //иначе-->
+<!--         tg.MainButton.show() //показываем-->
+<!--      }-->
+<!--   });-->
+
+<!--   let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать-->
+<!--   btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки-->
+<!--      if (tg.MainButton.isActive){ //если кнопка показана-->
+<!--         tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет-->
+<!--         tg.MainButton.disable() //скрываем кнопку-->
+<!--      }-->
+<!--      else{ //иначе-->
+<!--         tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет-->
+<!--         tg.MainButton.enable() //показываем-->
+<!--      }-->
+<!--   });-->
+
+<!--   Telegram.WebApp.onEvent('mainButtonClicked', function(){-->
+<!--      tg.sendData("some string that we need to send");-->
+<!--      //при клике на основную кнопку отправляем данные в строковом виде-->
+<!--   });-->
+
+
+<!--   let usercard = document.getElementById("usercard"); //получаем блок usercard-->
+
+<!--   let profName = document.createElement('p'); //создаем параграф-->
+<!--   profName.innerText = `${tg.initDataUnsafe.user.first_name}-->
+<!--   ${tg.initDataUnsafe.user.last_name}-->
+<!--   ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;-->
+<!--   //выдем имя, "фамилию", через тире username и код языка-->
+<!--   usercard.appendChild(profName); //добавляем-->
+
+<!--   let userid = document.createElement('p'); //создаем еще параграф-->
+<!--   userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id-->
+<!--   usercard.appendChild(userid); //добавляем-->
+
+
+   //работает только в attachment menu
+   // let pic = document.createElement('img'); //создаем img
+   // pic.src = tg.initDataUnsafe.user.photo_url; //задаём src
+   // usercard.appendChild(pic); //добавляем элемент в карточку
+</script>
+</html>
