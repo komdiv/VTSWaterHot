@@ -118,16 +118,16 @@
     </Table>
 
 
-<!--    <Table align='center' width=60% style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Введите № договора:-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <input type="text" width="80" height="200" placeholder="Введите № договора" tabindex="0">-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--    </Table> <br><br>-->
+    <!--    <Table align='center' width=60% style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'>-->
+    <!--        <tr>-->
+    <!--            <td>-->
+    <!--                Введите № договора:-->
+    <!--            </td>-->
+    <!--            <td>-->
+    <!--                <input type="text" width="80" height="200" placeholder="Введите № договора" tabindex="0">-->
+    <!--            </td>-->
+    <!--        </tr>-->
+    <!--    </Table> <br><br>-->
 </div>
 
 
@@ -144,10 +144,15 @@
    tg.expand(); //расширяем на все окно
 
    //tg.MainButton.text = "Changed Text"; //изменяем текст кнопки
-   tg.MainButton.setText("Спасибо. Все поянтно."); //изменяем текст кнопки иначе
-   tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
-   tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
-   tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+   //tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+   tg.MainButton.textColor = "#0000FF"; //изменяем цвет текста кнопки
+   //tg.MainButton.textColor = #748EE5; //изменяем цвет текста кнопки
+   //tg.MainButton.setParams({"textColor": "#748EE5"}); //так изменяются все параметры
+
+   //tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+   //tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+   tg.MainButton.color = "#D9F4F9"; //изменяем цвет бэкграунда кнопки
+   tg.MainButton.setParams({"color": "#D9F4F9"}); //так изменяются все параметры
    tg.MainButton.show(); //показываем
    if(tg.MainButton.isVisible){} else{tg.MainButton.show();}
 

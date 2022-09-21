@@ -211,7 +211,9 @@
 
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
       //window.Telegram.WebApp.close();
-      tg.sendData("some string that we need to send");
+      let webData = document.getElementById("inputText").value;
+      //tg.sendData("some string that we need to send");
+      tg.sendData(webData);
       //при клике на основную кнопку отправляем данные в строковом виде
    });
 
